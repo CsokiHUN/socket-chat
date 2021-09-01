@@ -1,10 +1,12 @@
 require('dotenv').config();
 
-const app = require('express')();
+const express = require('express');
+const app = express();
 const server = require('http').createServer(app);
 const io = require('socket.io')(server);
 
-app.get('/', (req, res) => res.sendFile(__dirname + '/index.html'));
+app.use(express.static(__dirname + '/public'));
+app.get('/', (req, res) => res.sendFile('index.html'));
 
 let messages = [];
 

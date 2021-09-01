@@ -1,0 +1,13 @@
+.messageInput {
+  resize: none;
+}
+
+#messages {
+  max-height: 40vh;
+  overflow-y: auto;
+}
+
+.userImage {
+  border-radius: 2rem;
+  height: 4vh;
+}
